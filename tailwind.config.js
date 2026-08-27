@@ -4,21 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        // INSPIRE brand — same YuuStore family but more premium/tech feel
-        background: "#0a0a0f",
-        surface: "#13131a",
-        "surface-light": "#1e1e28",
+        // Brighter, more premium feel — keeping the gold accent
+        background: "#121218",
+        surface: "#1a1a24",
+        "surface-light": "#252533",
         accent: {
           DEFAULT: "#e59d02",
           hover: "#f5b32d",
           dark: "#c08800",
-          glow: "rgba(229, 157, 2, 0.15)",
+          glow: "rgba(229, 157, 2, 0.2)",
         },
         heading: "#ffffff",
-        default: "#e8e8ef",
-        muted: "#7a7a8c",
-        "accent-blue": "#3b82f6",
-        "accent-green": "#10b981",
+        default: "#f0f0f5",
+        muted: "#9a9ab0",
+        "accent-blue": "#60a5fa",
+        "accent-green": "#34d399",
       },
       fontFamily: {
         display: ["Raleway", "system-ui", "sans-serif"],

@@ -116,9 +116,9 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero with 3D */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-b from-surface/60 via-background/30 to-background">
         <Hero3D />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background/90 pointer-events-none" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <motion.div
@@ -166,7 +166,7 @@ export default function LandingPage() {
       </section>
 
       {/* Stats */}
-      <section className="px-4 sm:px-6 py-12 border-t border-surface-light">
+      <section className="px-4 sm:px-6 py-12 border-t border-accent/10">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {STATS.map((s, i) => (
             <motion.div
@@ -233,7 +233,7 @@ export default function LandingPage() {
 
       {/* Projects */}
       {projects.length > 0 && (
-        <section id="projects" className="px-4 sm:px-6 py-20 bg-surface/50">
+        <section id="projects" className="px-4 sm:px-6 py-20 bg-gradient-to-b from-surface/40 to-background">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -317,7 +317,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="px-4 sm:px-6 py-20 bg-surface/50">
+      <section id="contact" className="px-4 sm:px-6 py-20 bg-gradient-to-b from-surface/40 to-background">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -354,7 +354,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-surface-light px-4 py-8 text-center">
+      <footer className="border-t border-accent/10 px-4 py-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-3">
           <img src="/inspire-by-yuustore/logo.png" alt="INSPIRE" className="w-9 h-9 rounded-lg object-cover" />
           <span className="font-display font-bold text-heading">INSPIRE by YuuStore</span>
