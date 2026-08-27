@@ -135,9 +135,7 @@ export default function AdminDashboard() {
       <nav className="glass border-b border-white/5 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-hover flex items-center justify-center">
-              <Star className="h-5 w-5 text-background" />
-            </div>
+            <img src="/inspire-by-yuustore/logo.png" alt="INSPIRE" className="w-9 h-9 rounded-lg object-cover" />
             <span className="font-display font-bold text-heading">INSPIRE Admin</span>
           </div>
           <div className="flex items-center gap-3">

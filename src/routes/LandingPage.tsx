@@ -76,9 +76,7 @@ export default function LandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 glass">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-hover flex items-center justify-center">
-              <Sparkles className="h-5 w-5 text-background" />
-            </div>
+            <img src="/inspire-by-yuustore/logo.png" alt="INSPIRE" className="w-9 h-9 rounded-lg object-cover" />
             <div>
               <span className="font-display font-bold text-lg text-heading">INSPIRE</span>
               <span className="text-xs text-muted ml-1">by YuuStore</span>
@@ -332,11 +330,11 @@ export default function LandingPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-            <a href="https://wa.me/243901950256" target="_blank" rel="noreferrer"
+            <a href="https://wa.me/243977555768" target="_blank" rel="noreferrer"
               className="glass rounded-xl p-6 text-center hover:border-accent/30 transition-all">
               <Phone className="h-6 w-6 text-accent mx-auto mb-2" />
               <p className="text-sm font-semibold text-heading">WhatsApp</p>
-              <p className="text-xs text-muted mt-1">+243 901 950 256</p>
+              <p className="text-xs text-muted mt-1">+243 977 555 768</p>
             </a>
             <a href="mailto:yuustore169@gmail.com"
               className="glass rounded-xl p-6 text-center hover:border-accent/30 transition-all">
@@ -358,9 +356,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-surface-light px-4 py-8 text-center">
         <div className="flex items-center justify-center gap-2 mb-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent-hover flex items-center justify-center">
-            <Sparkles className="h-5 w-5 text-background" />
-          </div>
+          <img src="/inspire-by-yuustore/logo.png" alt="INSPIRE" className="w-9 h-9 rounded-lg object-cover" />
           <span className="font-display font-bold text-heading">INSPIRE by YuuStore</span>
         </div>
         <p className="text-xs text-muted">
@@ -395,7 +391,7 @@ function ContactForm() {
     } catch (e: any) {
       // Fallback: open WhatsApp with prefilled message
       const msg = encodeURIComponent(`Bonjour, je suis ${name}. ${message}`);
-      window.open(`https://wa.me/243901950256?text=${msg}`, "_blank");
+      window.open(`https://wa.me/243977555768?text=${msg}`, "_blank");
       toast.success("Redirection vers WhatsApp...");
     } finally {
       setSending(false);
