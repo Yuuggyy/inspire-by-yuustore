@@ -1,6 +1,6 @@
 import { Component, Suspense, lazy, type ReactNode } from "react";
 
-const Hero3D = lazy(() => import("./Hero3DInner"));
+const Hero3DInner = lazy(() => import("./Hero3DInner"));
 
 class Hero3DErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
   state = { hasError: false };
@@ -27,7 +27,7 @@ class Hero3DErrorBoundary extends Component<{ children: ReactNode }, { hasError:
 export default function Hero3D() {
   return (
     <Hero3DErrorBoundary>
-      <Hero3D />
+      <Hero3DInner />
     </Hero3DErrorBoundary>
   );
 }
