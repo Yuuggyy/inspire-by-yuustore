@@ -16,7 +16,7 @@ const DEFAULT_SERVICES: Service[] = [
     id: "s1",
     title: "Conception & Développement Web",
     description: "Sites web modernes, rapides et responsive. Du landing page à l'e-commerce complet.",
-    icon: "🌐",
+    icon: "WEB",
     features: ["Sites vitrines", "E-commerce", "Applications web", "Optimisation SEO"],
     sort_order: 1,
   },
@@ -24,7 +24,7 @@ const DEFAULT_SERVICES: Service[] = [
     id: "s2",
     title: "Applications Cross-Plateformes",
     description: "Une seule base de code pour iOS, Android et Web avec Flutter et React Native.",
-    icon: "📱",
+    icon: "APP",
     features: ["iOS & Android", "PWA", "Temps réel", "Offline-first"],
     sort_order: 2,
   },
@@ -32,7 +32,7 @@ const DEFAULT_SERVICES: Service[] = [
     id: "s3",
     title: "Développement IA",
     description: "Agents intelligents, automatisation et intégration de modèles d'IA dans vos workflows.",
-    icon: "🤖",
+    icon: "AI",
     features: ["Chatbots IA", "Automatisation n8n", "Agents intelligents", "Intégration API"],
     sort_order: 3,
   },
@@ -40,7 +40,7 @@ const DEFAULT_SERVICES: Service[] = [
     id: "s4",
     title: "Entraînement de Modèles de Langage",
     description: "Fine-tuning et entraînement de LLMs pour des cas d'usage spécifiques à votre business.",
-    icon: "🧠",
+    icon: "LLM",
     features: ["Fine-tuning LLM", "RAG personnalisé", "Datasets sur mesure", "Déploiement"],
     sort_order: 4,
   },
@@ -210,7 +210,7 @@ export default function LandingPage() {
                 className="glass rounded-2xl p-6 hover:border-accent/30 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-sm font-bold shrink-0 group-hover:scale-110 transition-transform">
                     {service.icon}
                   </div>
                   <div className="flex-1">
@@ -260,7 +260,7 @@ export default function LandingPage() {
                       <img src={p.image_url} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     </div>
                   ) : (
-                    <div className="aspect-video bg-surface-light flex items-center justify-center text-4xl">🚀</div>
+                    <div className="aspect-video bg-surface-light flex items-center justify-center text-4xl font-bold text-accent">+</div>
                   )}
                   <div className="p-4">
                     <span className="text-xs text-accent uppercase tracking-wider">{p.category}</span>
@@ -362,7 +362,7 @@ export default function LandingPage() {
         <p className="text-xs text-muted">
           © {new Date().getFullYear()} INSPIRE by YuuStore Inc. A division of YuuStore Inc.
         </p>
-        <p className="text-xs text-muted mt-1">Designed by INSPIRE by YuuStore ✨</p>
+        <p className="text-xs text-muted mt-1">Designed by INSPIRE by YuuStore</p>
       </footer>
     </div>
   );

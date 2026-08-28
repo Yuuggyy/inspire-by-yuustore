@@ -189,7 +189,7 @@ export default function AdminDashboard() {
                   {p.image_url ? (
                     <img src={p.image_url} alt={p.title} className="w-full h-full object-cover" />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-4xl">🚀</div>
+                    <div className="w-full h-full flex items-center justify-center text-4xl"></div>
                   )}
                 </div>
                 <div className="p-3">
