@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Hero3D from "@/components/Hero3D";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -13,8 +14,8 @@ import { toast } from "sonner";
 const DEFAULT_SERVICES: Service[] = [
   {
     id: "s1",
-    title: "Conception & Developpement Web",
-    description: "Sites web modernes, rapides et responsive. Du landing page a l'e-commerce complet.",
+    title: "Conception & Développement Web",
+    description: "Sites web modernes, rapides et responsive. Du landing page à l'e-commerce complet.",
     icon: "WEB",
     features: ["Sites vitrines", "E-commerce", "Applications web", "Optimisation SEO"],
     sort_order: 1,
@@ -24,29 +25,29 @@ const DEFAULT_SERVICES: Service[] = [
     title: "Applications Cross-Plateformes",
     description: "Une seule base de code pour iOS, Android et Web avec Flutter et React Native.",
     icon: "APP",
-    features: ["iOS & Android", "PWA", "Temps reel", "Offline-first"],
+    features: ["iOS & Android", "PWA", "Temps réel", "Offline-first"],
     sort_order: 2,
   },
   {
     id: "s3",
-    title: "Developpement IA",
-    description: "Agents intelligents, automatisation et integration de modeles d'IA dans vos workflows.",
+    title: "Développement IA",
+    description: "Agents intelligents, automatisation et intégration de modèles d'IA dans vos workflows.",
     icon: "AI",
     features: ["Chatbots IA", "Automatisation n8n", "Agents intelligents", "Integration API"],
     sort_order: 3,
   },
   {
     id: "s4",
-    title: "Entrainement de Modeles de Langage",
-    description: "Fine-tuning et entrainement de LLMs pour des cas d'usage specifiques a votre business.",
+    title: "Entraînement de Modeles de Langage",
+    description: "Fine-tuning et entraînement de LLMs pour des cas d'usage specifiques a votre business.",
     icon: "LLM",
-    features: ["Fine-tuning LLM", "RAG personnalise", "Datasets sur mesure", "Deploiement"],
+    features: ["Fine-tuning LLM", "RAG personnalisé", "Datasets sur mesure", "Déploiement"],
     sort_order: 4,
   },
 ];
 
 const STATS = [
-  { value: "20+", label: "Projets livres" },
+  { value: "20+", label: "Projets livrés" },
   { value: "15+", label: "Clients satisfaits" },
   { value: "3", label: "Pays" },
   { value: "99.9%", label: "Uptime" },
@@ -85,7 +86,7 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center gap-6">
             <a href="#services" className="text-sm text-default hover:text-accent transition-colors">Services</a>
             <a href="#projects" className="text-sm text-default hover:text-accent transition-colors">Projets</a>
-            <a href="#about" className="text-sm text-default hover:text-accent transition-colors">A propos</a>
+            <a href="#about" className="text-sm text-default hover:text-accent transition-colors">À propos</a>
             <a href="#contact" className="text-sm text-default hover:text-accent transition-colors">Contact</a>
             {isAdmin && (
               <Link to="/admin" className="text-sm text-accent font-semibold">Admin</Link>
@@ -107,15 +108,16 @@ export default function LandingPage() {
           <div className="md:hidden glass border-t border-white/5 px-4 py-4 space-y-3">
             <a href="#services" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">Services</a>
             <a href="#projects" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">Projets</a>
-            <a href="#about" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">A propos</a>
+            <a href="#about" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">À propos</a>
             <a href="#contact" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">Contact</a>
             {isAdmin && <Link to="/admin" className="block text-sm text-accent font-semibold">Admin</Link>}
           </div>
         )}
       </nav>
 
-      {/* Hero without 3D - just gradient */}
+      {/* Hero with 3D */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-b from-surface/60 via-background/30 to-background">
+        <Hero3D />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -124,20 +126,20 @@ export default function LandingPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-accent/30 mb-6">
               <Sparkles className="h-3 w-3 text-accent" />
-              <span className="text-xs text-accent font-medium tracking-wider uppercase">Solutions numeriques premium</span>
+              <span className="text-xs text-accent font-medium tracking-wider uppercase">Solutions numériques premium</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-7xl font-bold text-heading leading-tight">
-              Nous creons.
+              Nous créons.
               <br />
-              <span className="gradient-text">Nous developpons.</span>
+              <span className="gradient-text">Nous développons.</span>
               <br />
               Nous inspirons.
             </h1>
 
             <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
               Conception de sites web, applications cross-plateformes, developpement
-              d'intelligence artificielle et entrainement de modeles de langage.
+              d'intelligence artificielle et entraînement de modeles de langage.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-10">
@@ -184,7 +186,7 @@ export default function LandingPage() {
           >
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-heading">Nos Services</h2>
             <p className="text-muted mt-3 max-w-xl mx-auto">
-              De la conception a la mise en production, nous couvrons tout le cycle de vie de vos produits numeriques.
+              De la conception à la mise en production, nous couvrons tout le cycle de vie de vos produits numériques.
             </p>
           </motion.div>
 
@@ -270,7 +272,7 @@ export default function LandingPage() {
           >
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-heading">A Propos</h2>
             <p className="text-muted mt-6 leading-relaxed max-w-2xl mx-auto">
-              Nous concevons, developpons et deployons des solutions numeriques sur mesure :
+              Nous concevons, développons et deployons des solutions numériques sur mesure :
               sites web, applications mobiles, et intelligence artificielle. Notre approche combine
               creativite, performance et technologies de pointe pour donner vie a vos idees.
             </p>
@@ -343,7 +345,7 @@ export default function LandingPage() {
           <span className="font-display font-bold text-heading">INSPIRE by YuuStore</span>
         </div>
         <p className="text-xs text-muted">
-          (c) {new Date().getFullYear()} INSPIRE by YuuStore Inc. A division of YuuStore Inc.
+          © {new Date().getFullYear()} INSPIRE by YuuStore Inc. A division of YuuStore Inc.
         </p>
         <p className="text-xs text-muted mt-1">Designed by INSPIRE by YuuStore</p>
       </footer>
@@ -368,7 +370,7 @@ function ContactForm() {
         message: message.trim(),
       });
       if (error) throw error;
-      toast.success("Message envoye ! Nous vous repondrons rapidement.");
+      toast.success("Message envoyé ! Nous vous répondrons rapidement.");
       setName(""); setEmail(""); setMessage("");
     } catch (e: any) {
       const msg = encodeURIComponent(`Bonjour, je suis ${name}. ${message}`);
@@ -405,7 +407,7 @@ function ContactForm() {
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Decriez votre projet..."
+          placeholder="Décrivez votre projet..."
           rows={4}
           className="w-full bg-background border border-surface-light rounded-lg px-4 py-2 text-sm focus:border-accent outline-none resize-none"
         />
