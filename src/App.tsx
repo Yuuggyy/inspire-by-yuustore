@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./lib/auth";
 import { Toaster } from "sonner";
 import { Loader2 } from "lucide-react";
-import LandingPage from "./routes/LandingPage";
+import LandingPageMinimal from "./routes/LandingPageMinimal";
 import AdminDashboard from "./routes/AdminDashboard";
 import AppErrorBoundary from "./components/AppErrorBoundary";
 
@@ -25,7 +25,7 @@ export default function App() {
             }}
           />
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={<LandingPageMinimal />} />
             <Route path="/admin" element={<ProtectedAdmin><AdminDashboard /></ProtectedAdmin>} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
