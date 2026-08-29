@@ -6,7 +6,6 @@ import {
   Check, Star, Sparkles, Menu, X, Mail, Phone, MapPin, ExternalLink,
   Loader2, Send,
 } from "lucide-react";
-import Hero3D from "@/components/Hero3D";
 import { supabase, type Project, type Service } from "@/lib/supabase";
 import { useAuth } from "@/lib/auth";
 import { toast } from "sonner";
@@ -14,8 +13,8 @@ import { toast } from "sonner";
 const DEFAULT_SERVICES: Service[] = [
   {
     id: "s1",
-    title: "Conception & Développement Web",
-    description: "Sites web modernes, rapides et responsive. Du landing page à l'e-commerce complet.",
+    title: "Conception & Developpement Web",
+    description: "Sites web modernes, rapides et responsive. Du landing page a l'e-commerce complet.",
     icon: "WEB",
     features: ["Sites vitrines", "E-commerce", "Applications web", "Optimisation SEO"],
     sort_order: 1,
@@ -25,29 +24,29 @@ const DEFAULT_SERVICES: Service[] = [
     title: "Applications Cross-Plateformes",
     description: "Une seule base de code pour iOS, Android et Web avec Flutter et React Native.",
     icon: "APP",
-    features: ["iOS & Android", "PWA", "Temps réel", "Offline-first"],
+    features: ["iOS & Android", "PWA", "Temps reel", "Offline-first"],
     sort_order: 2,
   },
   {
     id: "s3",
-    title: "Développement IA",
-    description: "Agents intelligents, automatisation et intégration de modèles d'IA dans vos workflows.",
+    title: "Developpement IA",
+    description: "Agents intelligents, automatisation et integration de modeles d'IA dans vos workflows.",
     icon: "AI",
-    features: ["Chatbots IA", "Automatisation n8n", "Agents intelligents", "Intégration API"],
+    features: ["Chatbots IA", "Automatisation n8n", "Agents intelligents", "Integration API"],
     sort_order: 3,
   },
   {
     id: "s4",
-    title: "Entraînement de Modèles de Langage",
-    description: "Fine-tuning et entraînement de LLMs pour des cas d'usage spécifiques à votre business.",
+    title: "Entrainement de Modeles de Langage",
+    description: "Fine-tuning et entrainement de LLMs pour des cas d'usage specifiques a votre business.",
     icon: "LLM",
-    features: ["Fine-tuning LLM", "RAG personnalisé", "Datasets sur mesure", "Déploiement"],
+    features: ["Fine-tuning LLM", "RAG personnalise", "Datasets sur mesure", "Deploiement"],
     sort_order: 4,
   },
 ];
 
 const STATS = [
-  { value: "20+", label: "Projets livrés" },
+  { value: "20+", label: "Projets livres" },
   { value: "15+", label: "Clients satisfaits" },
   { value: "3", label: "Pays" },
   { value: "99.9%", label: "Uptime" },
@@ -86,7 +85,7 @@ export default function LandingPage() {
           <div className="hidden md:flex items-center gap-6">
             <a href="#services" className="text-sm text-default hover:text-accent transition-colors">Services</a>
             <a href="#projects" className="text-sm text-default hover:text-accent transition-colors">Projets</a>
-            <a href="#about" className="text-sm text-default hover:text-accent transition-colors">À propos</a>
+            <a href="#about" className="text-sm text-default hover:text-accent transition-colors">A propos</a>
             <a href="#contact" className="text-sm text-default hover:text-accent transition-colors">Contact</a>
             {isAdmin && (
               <Link to="/admin" className="text-sm text-accent font-semibold">Admin</Link>
@@ -108,18 +107,15 @@ export default function LandingPage() {
           <div className="md:hidden glass border-t border-white/5 px-4 py-4 space-y-3">
             <a href="#services" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">Services</a>
             <a href="#projects" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">Projets</a>
-            <a href="#about" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">À propos</a>
+            <a href="#about" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">A propos</a>
             <a href="#contact" onClick={() => setMenuOpen(false)} className="block text-sm text-default hover:text-accent">Contact</a>
             {isAdmin && <Link to="/admin" className="block text-sm text-accent font-semibold">Admin</Link>}
           </div>
         )}
       </nav>
 
-      {/* Hero with 3D */}
+      {/* Hero without 3D - just gradient */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-b from-surface/60 via-background/30 to-background">
-        <Hero3D />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background/90 pointer-events-none" />
-
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -128,20 +124,20 @@ export default function LandingPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-accent/30 mb-6">
               <Sparkles className="h-3 w-3 text-accent" />
-              <span className="text-xs text-accent font-medium tracking-wider uppercase">Solutions numériques premium</span>
+              <span className="text-xs text-accent font-medium tracking-wider uppercase">Solutions numeriques premium</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-7xl font-bold text-heading leading-tight">
-              Nous créons.
+              Nous creons.
               <br />
-              <span className="gradient-text">Nous développons.</span>
+              <span className="gradient-text">Nous developpons.</span>
               <br />
               Nous inspirons.
             </h1>
 
             <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-              Conception de sites web, applications cross-plateformes, développement
-              d'intelligence artificielle et entraînement de modèles de langage.
+              Conception de sites web, applications cross-plateformes, developpement
+              d'intelligence artificielle et entrainement de modeles de langage.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-10">
@@ -155,13 +151,6 @@ export default function LandingPage() {
               </a>
             </div>
           </motion.div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 rounded-full border-2 border-muted/40 flex items-start justify-center p-1.5">
-            <div className="w-1 h-2 rounded-full bg-accent" />
-          </div>
         </div>
       </section>
 
@@ -195,7 +184,7 @@ export default function LandingPage() {
           >
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-heading">Nos Services</h2>
             <p className="text-muted mt-3 max-w-xl mx-auto">
-              De la conception à la mise en production, nous couvrons tout le cycle de vie de vos produits numériques.
+              De la conception a la mise en production, nous couvrons tout le cycle de vie de vos produits numeriques.
             </p>
           </motion.div>
 
@@ -214,15 +203,15 @@ export default function LandingPage() {
                     {service.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-display text-xl font-bold text-heading">{service.title}</h3>
-                    <p className="text-sm text-muted mt-1 leading-relaxed">{service.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {service.features.map((f, j) => (
-                        <span key={j} className="text-xs px-3 py-1 rounded-full bg-surface border border-surface-light text-default">
-                          {f}
-                        </span>
+                    <h3 className="font-display text-lg font-semibold text-heading mb-1">{service.title}</h3>
+                    <p className="text-sm text-muted leading-relaxed">{service.description}</p>
+                    <ul className="mt-4 space-y-1.5">
+                      {service.features.map((f, fi) => (
+                        <li key={fi} className="flex items-center gap-2 text-xs text-default">
+                          <Check className="h-3.5 w-3.5 text-accent shrink-0" /> {f}
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -232,20 +221,18 @@ export default function LandingPage() {
       </section>
 
       {/* Projects */}
-      {projects.length > 0 && (
-        <section id="projects" className="px-4 sm:px-6 py-20 bg-gradient-to-b from-surface/40 to-background">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-heading">Nos Réalisations</h2>
-              <p className="text-muted mt-3">Quelques projets que nous avons développés.</p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section id="projects" className="px-4 sm:px-6 py-20 border-t border-accent/10">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-heading">Nos Projets</h2>
+          </motion.div>
+          {projects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {projects.map((p, i) => (
                 <motion.div
                   key={p.id}
@@ -253,96 +240,92 @@ export default function LandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="glass rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-300 group"
+                  className="glass rounded-2xl overflow-hidden hover:border-accent/30 transition-all"
                 >
-                  {p.image_url ? (
-                    <div className="aspect-video bg-surface-light overflow-hidden">
-                      <img src={p.image_url} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                    </div>
-                  ) : (
-                    <div className="aspect-video bg-surface-light flex items-center justify-center text-4xl font-bold text-accent">+</div>
-                  )}
-                  <div className="p-4">
-                    <span className="text-xs text-accent uppercase tracking-wider">{p.category}</span>
-                    <h3 className="font-display text-lg font-bold text-heading mt-1">{p.title}</h3>
-                    <p className="text-sm text-muted mt-1 line-clamp-2">{p.description}</p>
-                    <div className="flex flex-wrap gap-1.5 mt-3">
-                      {p.tags?.map((t, j) => (
-                        <span key={j} className="text-[10px] px-2 py-0.5 rounded bg-accent/10 text-accent border border-accent/20">{t}</span>
-                      ))}
-                    </div>
-                    {p.url && (
-                      <a href={p.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 mt-3 text-xs text-accent hover:underline">
-                        Voir le projet <ExternalLink className="h-3 w-3" />
-                      </a>
-                    )}
+                  {p.image_url && <img src={p.image_url} alt={p.title} className="w-full h-48 object-cover" />}
+                  <div className="p-5">
+                    <h3 className="font-display text-lg font-semibold text-heading">{p.title}</h3>
+                    <p className="text-sm text-muted mt-2">{p.description}</p>
+                    {p.link && <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs text-accent mt-3">Voir <ExternalLink className="h-3 w-3" /></a>}
                   </div>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-      )}
+          ) : (
+            <div className="text-center text-muted py-12">
+              <p>Projets a venir. Une idee ? <a href="#contact" className="text-accent">Contactez-nous</a></p>
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* About */}
-      <section id="about" className="px-4 sm:px-6 py-20">
-        <div className="max-w-3xl mx-auto text-center">
+      <section id="about" className="px-4 sm:px-6 py-20 border-t border-accent/10">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-center mb-12"
           >
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-accent-hover flex items-center justify-center mx-auto mb-6">
-              <Sparkles className="h-8 w-8 text-background" />
-            </div>
-            <h2 className="font-display text-3xl font-bold text-heading">À propos d'INSPIRE</h2>
-            <p className="text-muted mt-4 leading-relaxed">
-              INSPIRE by YuuStore est la division numérique de YuuStore Inc., fondée par Guy Muzongo.
-              Nous concevons, développons et déployons des solutions numériques sur mesure :
-              sites web, applications mobiles cross-plateformes, intelligence artificielle
-              et entraînement de modèles de langage.
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-heading">A Propos</h2>
+            <p className="text-muted mt-6 leading-relaxed max-w-2xl mx-auto">
+              Nous concevons, developpons et deployons des solutions numeriques sur mesure :
+              sites web, applications mobiles, et intelligence artificielle. Notre approche combine
+              creativite, performance et technologies de pointe pour donner vie a vos idees.
             </p>
-            <p className="text-muted mt-3 leading-relaxed">
-              Basés à Kinshasa, RDC, nous servons des clients en Afrique et au-delà avec
-              un seul objectif : transformer vos idées en produits numériques qui inspirent.
+            <p className="text-muted mt-4 leading-relaxed max-w-2xl mx-auto">
+              Bases a Kinshasa, RDC, nous servons des clients en Afrique et au-dela avec
+              un standard de qualite international.
             </p>
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <div className="text-center">
-                <p className="font-display text-2xl font-bold text-accent">Guy Muzongo</p>
-                <p className="text-xs text-muted">CEO & Fondateur</p>
-              </div>
-            </div>
           </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            <div className="glass rounded-xl p-4 text-center">
+              <Code2 className="h-6 w-6 text-accent mx-auto mb-2" />
+              <p className="text-xs font-semibold text-heading">Web</p>
+            </div>
+            <div className="glass rounded-xl p-4 text-center">
+              <Smartphone className="h-6 w-6 text-accent mx-auto mb-2" />
+              <p className="text-xs font-semibold text-heading">Mobile</p>
+            </div>
+            <div className="glass rounded-xl p-4 text-center">
+              <Brain className="h-6 w-6 text-accent mx-auto mb-2" />
+              <p className="text-xs font-semibold text-heading">IA</p>
+            </div>
+            <div className="glass rounded-xl p-4 text-center">
+              <Cpu className="h-6 w-6 text-accent mx-auto mb-2" />
+              <p className="text-xs font-semibold text-heading">LLM</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="px-4 sm:px-6 py-20 bg-gradient-to-b from-surface/40 to-background">
-        <div className="max-w-3xl mx-auto">
+      <section id="contact" className="px-4 sm:px-6 py-20 border-t border-accent/10">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-10"
+            className="text-center mb-12"
           >
-            <h2 className="font-display text-3xl font-bold text-heading">Discutons de votre projet</h2>
-            <p className="text-muted mt-3">Une équipe dédiée à votre disposition.</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-heading">Contact</h2>
+            <p className="text-muted mt-3">Discutons de votre projet</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-            <a href="https://wa.me/243977555768" target="_blank" rel="noreferrer"
-              className="glass rounded-xl p-6 text-center hover:border-accent/30 transition-all">
-              <Phone className="h-6 w-6 text-accent mx-auto mb-2" />
-              <p className="text-sm font-semibold text-heading">WhatsApp</p>
-              <p className="text-xs text-muted mt-1">+243 977 555 768</p>
-            </a>
-            <a href="mailto:yuustore169@gmail.com"
-              className="glass rounded-xl p-6 text-center hover:border-accent/30 transition-all">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
+            <div className="glass rounded-xl p-4 text-center">
               <Mail className="h-6 w-6 text-accent mx-auto mb-2" />
               <p className="text-sm font-semibold text-heading">Email</p>
-              <p className="text-xs text-muted mt-1">yuustore169@gmail.com</p>
-            </a>
-            <div className="glass rounded-xl p-6 text-center">
+              <p className="text-xs text-muted mt-1">contact@inspire-yuustore.com</p>
+            </div>
+            <div className="glass rounded-xl p-4 text-center">
+              <Phone className="h-6 w-6 text-accent mx-auto mb-2" />
+              <p className="text-sm font-semibold text-heading">Telephone</p>
+              <p className="text-xs text-muted mt-1">+243 977 555 768</p>
+            </div>
+            <div className="glass rounded-xl p-4 text-center">
               <MapPin className="h-6 w-6 text-accent mx-auto mb-2" />
               <p className="text-sm font-semibold text-heading">Localisation</p>
               <p className="text-xs text-muted mt-1">Kinshasa, RDC</p>
@@ -360,7 +343,7 @@ export default function LandingPage() {
           <span className="font-display font-bold text-heading">INSPIRE by YuuStore</span>
         </div>
         <p className="text-xs text-muted">
-          © {new Date().getFullYear()} INSPIRE by YuuStore Inc. A division of YuuStore Inc.
+          (c) {new Date().getFullYear()} INSPIRE by YuuStore Inc. A division of YuuStore Inc.
         </p>
         <p className="text-xs text-muted mt-1">Designed by INSPIRE by YuuStore</p>
       </footer>
@@ -373,7 +356,6 @@ function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
-  // toast imported at top
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -386,10 +368,9 @@ function ContactForm() {
         message: message.trim(),
       });
       if (error) throw error;
-      toast.success("Message envoyé ! Nous vous répondrons rapidement.");
+      toast.success("Message envoye ! Nous vous repondrons rapidement.");
       setName(""); setEmail(""); setMessage("");
     } catch (e: any) {
-      // Fallback: open WhatsApp with prefilled message
       const msg = encodeURIComponent(`Bonjour, je suis ${name}. ${message}`);
       window.open(`https://wa.me/243977555768?text=${msg}`, "_blank");
       toast.success("Redirection vers WhatsApp...");
@@ -424,7 +405,7 @@ function ContactForm() {
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Décrivez votre projet..."
+          placeholder="Decriez votre projet..."
           rows={4}
           className="w-full bg-background border border-surface-light rounded-lg px-4 py-2 text-sm focus:border-accent outline-none resize-none"
         />
